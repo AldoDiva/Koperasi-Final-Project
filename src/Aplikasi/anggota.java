@@ -135,13 +135,26 @@ catch(Exception e){JOptionPane.showMessageDialog(rootPane, e);
         bedit = new javax.swing.JButton();
         bkeluar = new javax.swing.JButton();
         bupdate = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        Table1 = new javax.swing.JTable();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        tnama1 = new javax.swing.JTextField();
+        talamat1 = new javax.swing.JTextField();
+        ttelp1 = new javax.swing.JTextField();
+        tpekerjaan1 = new javax.swing.JTextField();
+        tkota1 = new javax.swing.JTextField();
+        tno1 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         tcarikode = new javax.swing.JTextField();
         tcarinama = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Table1 = new javax.swing.JTable();
         jLabel10 = new javax.swing.JLabel();
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
@@ -246,7 +259,7 @@ catch(Exception e){JOptionPane.showMessageDialog(rootPane, e);
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Formulir Anggota Koperasi");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 228, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 228, -1));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
 
@@ -317,20 +330,57 @@ catch(Exception e){JOptionPane.showMessageDialog(rootPane, e);
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, 176));
 
-        Table1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(Table1);
+        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 620, 110));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel11.setText("No. Anggota :");
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 16, 163, -1));
+
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel12.setText("Nama :");
+        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 42, 163, -1));
+
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel13.setText("Alamat :");
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 68, 163, -1));
+
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel14.setText("Kota :");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 94, 163, -1));
+
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel15.setText("No. Telp :");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 120, 163, -1));
+
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel16.setText("Pekerjaan :");
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 146, 163, -1));
+        jPanel3.add(tnama1, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 39, 211, -1));
+        jPanel3.add(talamat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 65, 301, -1));
+
+        ttelp1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ttelp1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(ttelp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 117, 160, -1));
+        jPanel3.add(tpekerjaan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 143, 160, -1));
+        jPanel3.add(tkota1, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 91, 160, -1));
+
+        tno1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tno1ActionPerformed(evt);
+            }
+        });
+        tno1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tno1KeyPressed(evt);
+            }
+        });
+        jPanel3.add(tno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 13, 86, -1));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 510, 180));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Cari Berdasarkan"));
 
@@ -370,20 +420,36 @@ catch(Exception e){JOptionPane.showMessageDialog(rootPane, e);
             }
         });
 
+        Table1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(Table1);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(180, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tcarikode, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(705, 705, 705)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tcarinama, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 609, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -394,13 +460,15 @@ catch(Exception e){JOptionPane.showMessageDialog(rootPane, e);
                         .addComponent(jLabel9))
                     .addComponent(tcarikode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tcarinama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 620, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 620, 230));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Aplikasi/jr-korpa-k9TDpGMDavs-unsplash.jpg"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 640, 510));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -586,6 +654,18 @@ catch(Exception e){JOptionPane.showMessageDialog(rootPane, e);
         // TODO add your handling code here:
     }//GEN-LAST:event_ttelpActionPerformed
 
+    private void ttelp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ttelp1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ttelp1ActionPerformed
+
+    private void tno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tno1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tno1ActionPerformed
+
+    private void tno1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tno1KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tno1KeyPressed
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -603,6 +683,12 @@ catch(Exception e){JOptionPane.showMessageDialog(rootPane, e);
     private javax.swing.JButton bupdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -613,15 +699,22 @@ catch(Exception e){JOptionPane.showMessageDialog(rootPane, e);
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField talamat;
+    private javax.swing.JTextField talamat1;
     private javax.swing.JTextField tcarikode;
     private javax.swing.JTextField tcarinama;
     private javax.swing.JTextField tkota;
+    private javax.swing.JTextField tkota1;
     private javax.swing.JTextField tnama;
+    private javax.swing.JTextField tnama1;
     private javax.swing.JTextField tno;
+    private javax.swing.JTextField tno1;
     private javax.swing.JTextField tpekerjaan;
+    private javax.swing.JTextField tpekerjaan1;
     private javax.swing.JTextField ttelp;
+    private javax.swing.JTextField ttelp1;
     // End of variables declaration//GEN-END:variables
 }
